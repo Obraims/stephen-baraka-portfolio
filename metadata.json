@@ -1,0 +1,6 @@
+{
+  "name": "Stephen Baraka | Software Engineer",
+  "description": "An interactive, motion-first, high-performance portfolio for software engineer and AI builder Stephen Baraka. Built with custom scroll parallax, real-time node background simulation, and reactive code playgrounds.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
