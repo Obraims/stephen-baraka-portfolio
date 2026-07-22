@@ -98,7 +98,7 @@ export default function Timeline() {
                       src={milestone.image} 
                       alt={milestone.title}
                       referrerPolicy="no-referrer"
-                      className="object-cover w-full h-full"
+                      className="object-cover object-top w-full h-full"
                     />
                     <div className="absolute inset-0 bg-gradient-to-t from-slate-950/60 via-transparent to-transparent" />
                     <div className="absolute bottom-4 left-4 text-white font-display text-sm font-bold">

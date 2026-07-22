@@ -235,7 +235,7 @@ export default function Hero() {
                     src={frontProfileImage}
                     alt="Stephen Baraka Profile"
                     referrerPolicy="no-referrer"
-                    className="object-cover w-full h-full transform transition duration-500 group-hover:scale-105"
+                    className="object-cover object-top w-full h-full transform transition duration-500 group-hover:scale-105"
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-slate-950/80 via-slate-950/20 to-transparent" />
                   
