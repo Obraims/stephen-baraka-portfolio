@@ -44,7 +44,7 @@ export default function Projects() {
       ],
       accentColor: "from-indigo-500 to-violet-600",
       icon: Github,
-      image: obraimAiImg,
+      image: "https://images.unsplash.com/photo-1593305841991-05c297ba4575?q=80&w=800&auto=format&fit=crop",
       link: "https://gitvora-jf2ugr9qe-obraims-projects-d0bfc7b8.vercel.app",
       github: "https://github.com/Obraims/gitvora"
     },
@@ -62,7 +62,7 @@ export default function Projects() {
       ],
       accentColor: "from-amber-500 to-orange-600",
       icon: Layers,
-      image: ujimaiCapstoneImg,
+      image: "https://images.unsplash.com/photo-1542751371-adc38448a05e?q=80&w=800&auto=format&fit=crop",
       link: "https://dev-tier-7oeydr2iv-obraims-projects-d0bfc7b8.vercel.app",
       github: "https://github.com/Obraims/dev-tier"
     },
@@ -97,7 +97,7 @@ export default function Projects() {
       ],
       accentColor: "from-emerald-500 to-teal-600",
       icon: Activity,
-      image: toolloopImg,
+      image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?q=80&w=800&auto=format&fit=crop",
       link: "#finledger"
     }
   ];

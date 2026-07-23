@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
 import Hero from "./components/Hero.tsx";
 import About from "./components/About.tsx";
+import ArchitectSolve from "./components/ArchitectSolve.tsx";
 import Skills from "./components/Skills.tsx";
 import HyperLedger from "./components/HyperLedger.tsx";
 import GithubShowcase from "./components/GithubShowcase.tsx";
@@ -52,6 +53,7 @@ export default function App() {
 
   const navLinks = [
     { name: "About", href: "#about" },
+    { name: "Architect & Solve", href: "#architect" },
     { name: "Projects", href: "#projects" },
     { name: "Skills", href: "#skills" },
     { name: "Ledger Engine", href: "#finledger" },
@@ -195,6 +197,9 @@ export default function App() {
         </motion.div>
         <motion.div variants={pageSectionVariants}>
           <About />
+        </motion.div>
+        <motion.div variants={pageSectionVariants}>
+          <ArchitectSolve />
         </motion.div>
         <motion.div variants={pageSectionVariants}>
           <Projects />
