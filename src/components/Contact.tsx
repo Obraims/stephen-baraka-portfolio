@@ -131,7 +131,7 @@ export default function Contact() {
                       Location
                     </span>
                     <span className="font-semibold">
-                      Maseno University / Kisumu, Kenya
+                      Kenya
                     </span>
                   </div>
                 </div>

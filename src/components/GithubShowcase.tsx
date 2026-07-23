@@ -104,16 +104,16 @@ export default function GithubShowcase() {
     {
       id: "finledger-core",
       title: "finledger-core",
-      desc: "Precision double-entry accounting software engine with integer-based Kenya VAT calculation algorithms.",
-      tech: ["TypeScript", "React", "Recharts", "Accounting Math"],
+      desc: "Interactive financial ledger visualization tool for double-entry bookkeeping and financial data analysis.",
+      tech: ["TypeScript", "React", "Recharts", "Financial Math"],
       stars: 8,
       url: "https://github.com/Obraims",
-      problem: "Floating-point precision issues in JavaScript lead to rounding errors in financial tax calculations.",
-      solution: "Stores monetary balances in minor units (cents) and executes integer arithmetic for tax & GAAP double-entry ledger balancing.",
+      problem: "Standard floating-point calculations can introduce rounding errors in currency and tax reporting.",
+      solution: "Stores monetary balances in minor units (cents) and executes integer arithmetic for ledger balancing and financial statement generation.",
       highlights: [
-        "Zero-floating-point-error minor-unit arithmetic",
-        "Kenya VAT 16% tax output calculations",
-        "Recharts balance sheet & income statement visualizers"
+        "Integer minor-unit currency arithmetic",
+        "Interactive financial statement visualizer",
+        "Recharts balance sheet & income statement views"
       ]
     }
   ];

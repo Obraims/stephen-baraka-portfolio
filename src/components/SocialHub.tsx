@@ -1,145 +1,132 @@
-import React, { useState } from "react";
-import { 
-  Github, Linkedin, Twitter, Mail, Copy, Check, ExternalLink, MessageCircle, Share2
-} from "lucide-react";
+import React from "react";
+import { motion } from "motion/react";
+import { Github, Linkedin, Twitter, Mail, MessageSquare, ExternalLink, Sparkles, Send } from "lucide-react";
+import { personalInfo } from "../data";
 
 export default function SocialHub() {
-  const [copiedEmail, setCopiedEmail] = useState(false);
-
-  const copyEmailToClipboard = () => {
-    navigator.clipboard.writeText("obraimssteve@gmail.com");
-    setCopiedEmail(true);
-    setTimeout(() => setCopiedEmail(false), 2000);
-  };
-
-  const channels = [
+  const platforms = [
     {
       name: "GitHub",
-      handle: "@Obraims",
-      url: "https://github.com/Obraims",
-      description: "Explore my open-source repositories, full-stack projects, and code commit history.",
+      handle: "@Obraim",
+      desc: "Explore my open-source software repositories, contribution graph, and source code.",
+      url: personalInfo.github,
       icon: Github,
-      badge: "Code & Repos",
-      accent: "hover:border-stone-400 dark:hover:border-slate-500"
+      color: "from-slate-700 to-slate-900",
+      accent: "text-slate-200 border-slate-700"
     },
     {
       name: "LinkedIn",
       handle: "Stephen Baraka",
-      url: "https://www.linkedin.com/in/stephen-baraka-055b7040b",
-      description: "Connect with me professionally to discuss software engineering, finance IT, and career opportunities.",
+      desc: "Connect professionally, view my career roadmap, and explore engineering collaborations.",
+      url: personalInfo.linkedin,
       icon: Linkedin,
-      badge: "Professional Network",
-      accent: "hover:border-blue-500/50"
-    },
-    {
-      name: "TikTok",
-      handle: "@_obraims_",
-      url: "https://www.tiktok.com/@_obraims_?is_from_webapp=1&sender_device=pc",
-      description: "Tech showcases, software breakdown videos, and coding updates.",
-      icon: Share2,
-      badge: "Tech Content",
-      accent: "hover:border-pink-500/50"
+      color: "from-blue-600 to-sky-700",
+      accent: "text-sky-400 border-blue-800/50"
     },
     {
       name: "Twitter / X",
       handle: "@Obraimss",
-      url: "https://x.com/Obraimss",
-      description: "Engineering thoughts, tech industry news, and development updates.",
+      desc: "Follow my software engineering updates, tech insights, and project announcements.",
+      url: personalInfo.twitter,
       icon: Twitter,
-      badge: "Updates & Thoughts",
-      accent: "hover:border-sky-500/50"
+      color: "from-sky-500 to-cyan-600",
+      accent: "text-cyan-400 border-sky-800/50"
+    },
+    {
+      name: "TikTok",
+      handle: "@_obraims_",
+      desc: "Watch short coding clips, developer tools demonstrations, and tech breakdowns.",
+      url: personalInfo.tiktok,
+      icon: Send,
+      color: "from-pink-600 to-rose-700",
+      accent: "text-pink-400 border-pink-800/50"
     },
     {
       name: "WhatsApp Direct",
       handle: "+254 743 717 285",
-      url: "https://wa.me/254743717285",
-      description: "Direct instant message line for fast project inquiries or quick chat.",
-      icon: MessageCircle,
-      badge: "Instant Chat",
-      accent: "hover:border-emerald-500/50"
+      desc: "Reach out directly for rapid communication, project discussions, and inquiries.",
+      url: personalInfo.whatsapp,
+      icon: MessageSquare,
+      color: "from-emerald-600 to-teal-700",
+      accent: "text-emerald-400 border-emerald-800/50"
     },
     {
-      name: "Direct Email",
-      handle: "obraimssteve@gmail.com",
-      url: "mailto:obraimssteve@gmail.com",
-      description: "Send direct project inquiries, contract requests, or questions.",
+      name: "Email Communication",
+      handle: personalInfo.email,
+      desc: "Send formal inquiries, contract proposals, or project briefs via email.",
+      url: `mailto:${personalInfo.email}`,
       icon: Mail,
-      badge: "Email Contact",
-      accent: "hover:border-indigo-500/50"
+      color: "from-violet-600 to-purple-700",
+      accent: "text-purple-400 border-purple-800/50"
     }
   ];
 
   return (
     <section 
-      id="social-hub" 
-      className="relative py-20 px-6 md:px-12 lg:px-24 bg-stone-50 dark:bg-slate-950/40 border-b border-stone-200 dark:border-slate-800 transition-colors"
+      id="connect" 
+      className="relative py-20 px-4 sm:px-6 lg:px-8 bg-slate-950 border-b border-slate-800/80 transition-colors select-none"
     >
-      <div className="max-w-7xl w-full mx-auto">
+      <div className="max-w-7xl mx-auto space-y-14">
         
         {/* Section Heading */}
-        <div className="flex flex-col md:flex-row md:items-end justify-between mb-12 gap-4">
-          <div>
-            <div className="inline-flex items-center space-x-1.5 px-3 py-1 bg-indigo-50 dark:bg-indigo-950/50 text-indigo-600 dark:text-indigo-300 text-xs font-mono font-semibold rounded-full uppercase tracking-wider mb-3">
-              <span>Connect & Socials</span>
-            </div>
-            <h2 className="text-3xl md:text-4xl font-display font-bold text-stone-900 dark:text-white">
-              Online Profiles & Channels
-            </h2>
-            <p className="text-stone-600 dark:text-slate-400 font-sans mt-2 text-base max-w-xl">
-              Connect across GitHub, LinkedIn, TikTok, WhatsApp, or send a direct email.
-            </p>
+        <div className="max-w-3xl mx-auto text-center space-y-3">
+          <div className="inline-flex items-center space-x-2 px-3 py-1 bg-cyan-950/60 text-cyan-400 text-xs font-mono font-semibold rounded-full border border-cyan-800/40 uppercase tracking-wider">
+            <Sparkles className="w-3.5 h-3.5" />
+            <span>Platform Connectivity</span>
           </div>
 
-          <button
-            onClick={copyEmailToClipboard}
-            className="inline-flex items-center gap-2 px-4 py-2.5 bg-white dark:bg-slate-800 border border-stone-200 dark:border-slate-700 hover:bg-stone-50 dark:hover:bg-slate-750 text-stone-800 dark:text-slate-200 text-xs font-mono font-medium rounded-xl transition cursor-pointer shadow-xs"
-          >
-            {copiedEmail ? <Check className="h-4 w-4 text-emerald-500" /> : <Copy className="h-4 w-4" />}
-            <span>{copiedEmail ? "Email Copied!" : "Copy Email Address"}</span>
-          </button>
+          <h2 className="text-3xl md:text-4xl font-display font-bold text-white">
+            Connect Across Platforms
+          </h2>
+
+          <p className="text-slate-400 font-sans text-sm md:text-base leading-relaxed">
+            Find me across developer platforms, social networks, and direct communication channels.
+          </p>
         </div>
 
-        {/* Channels Grid */}
+        {/* Platform Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-          {channels.map((channel) => {
-            const Icon = channel.icon;
+          {platforms.map((p, idx) => {
+            const Icon = p.icon;
             return (
-              <a
-                key={channel.name}
-                href={channel.url}
+              <motion.a
+                key={p.name}
+                href={p.url}
                 target="_blank"
-                rel="noopener noreferrer"
-                className={`p-6 bg-white dark:bg-slate-900 border border-stone-200 dark:border-slate-800 rounded-2xl transition-all duration-300 shadow-xs flex flex-col justify-between group ${channel.accent}`}
+                rel="noreferrer"
+                initial={{ opacity: 0, y: 15 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.4, delay: idx * 0.05 }}
+                className="group p-6 rounded-2xl bg-slate-900/60 border border-slate-800 hover:border-slate-700 transition flex flex-col justify-between space-y-4"
               >
-                <div>
-                  <div className="flex justify-between items-start mb-4">
-                    <div className="p-3 bg-stone-50 dark:bg-slate-800 rounded-xl text-stone-800 dark:text-slate-200 group-hover:scale-105 transition-transform">
-                      <Icon className="h-5 w-5" />
+                <div className="space-y-3">
+                  <div className="flex items-center justify-between">
+                    <div className={`p-3 rounded-xl bg-slate-950 border ${p.accent}`}>
+                      <Icon className="w-5 h-5" />
                     </div>
-                    <span className="text-[10px] font-mono font-semibold px-2.5 py-1 bg-stone-100 dark:bg-slate-800 text-stone-600 dark:text-slate-400 rounded-md">
-                      {channel.badge}
+                    <ExternalLink className="w-4 h-4 text-slate-500 group-hover:text-cyan-400 transition" />
+                  </div>
+
+                  <div>
+                    <h3 className="text-lg font-bold font-display text-white group-hover:text-cyan-400 transition">
+                      {p.name}
+                    </h3>
+                    <span className="text-xs font-mono text-cyan-400 font-semibold block mt-0.5">
+                      {p.handle}
                     </span>
                   </div>
 
-                  <h3 className="text-xl font-display font-bold text-stone-900 dark:text-white flex items-center gap-1.5 group-hover:text-indigo-600 dark:group-hover:text-indigo-400 transition-colors">
-                    {channel.name}
-                    <ExternalLink className="h-4 w-4 opacity-0 group-hover:opacity-100 transition-opacity" />
-                  </h3>
-                  
-                  <span className="text-xs font-mono font-medium text-stone-500 dark:text-slate-400 block mt-0.5">
-                    {channel.handle}
-                  </span>
-
-                  <p className="text-xs text-stone-600 dark:text-slate-400 mt-3 leading-relaxed">
-                    {channel.description}
+                  <p className="text-xs text-slate-400 leading-relaxed font-sans">
+                    {p.desc}
                   </p>
                 </div>
 
-                <div className="mt-6 pt-3 border-t border-stone-100 dark:border-slate-800 flex items-center justify-between text-xs font-medium text-indigo-600 dark:text-indigo-400">
-                  <span>Visit Profile</span>
-                  <span>→</span>
+                <div className="pt-3 border-t border-slate-800/80 flex items-center justify-between text-[11px] font-mono text-slate-500 group-hover:text-slate-300 transition">
+                  <span>Connect Node</span>
+                  <span>↗</span>
                 </div>
-              </a>
+              </motion.a>
             );
           })}
         </div>
