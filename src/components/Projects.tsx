@@ -85,15 +85,15 @@ export default function Projects() {
     },
     {
       id: "finledger-engine",
-      title: "FinLedger Math & Tax Engine",
-      tag: "Financial Accounting Module",
-      desc: "Precision double-entry accounting software engine with integer-based Kenya 16% VAT calculation algorithms.",
-      longDesc: "FinLedger implements corporate GAAP double-entry ledger validation rules with precise minor-unit arithmetic (preventing floating-point rounding bugs). Generates balance sheets, income statements, and tax breakdown reports.",
-      tech: ["TypeScript", "React", "Recharts", "GAAP Math", "Tailwind CSS"],
+      title: "FinLedger",
+      tag: "Ledger Visualization & Math Tool",
+      desc: "An interactive financial ledger visualization tool that parses transaction logs and displays balance sheets, income statements, and tax breakdowns.",
+      longDesc: "FinLedger is a personal project exploring double-entry ledger bookkeeping algorithms and data visualization. It parses transaction logs into interactive charts for income statements, balance sheets, and tax breakdowns with zero floating-point arithmetic errors.",
+      tech: ["TypeScript", "React", "Recharts", "Tailwind CSS"],
       metrics: [
-        { label: "Precision", value: "100% Integer" },
-        { label: "Tax Rules", value: "Kenya 16% VAT" },
-        { label: "Accounting", value: "GAAP Double-Entry" }
+        { label: "Data Parsing", value: "CSV & JSON" },
+        { label: "Visualization", value: "Recharts" },
+        { label: "Type Safety", value: "TypeScript" }
       ],
       accentColor: "from-emerald-500 to-teal-600",
       icon: Activity,

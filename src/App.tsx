@@ -1,12 +1,12 @@
 import { useState, useEffect } from "react";
 import Hero from "./components/Hero.tsx";
 import About from "./components/About.tsx";
-import ArchitectSolve from "./components/ArchitectSolve.tsx";
+import Projects from "./components/Projects.tsx";
 import Skills from "./components/Skills.tsx";
 import HyperLedger from "./components/HyperLedger.tsx";
 import GithubShowcase from "./components/GithubShowcase.tsx";
-import Projects from "./components/Projects.tsx";
 import Timeline from "./components/Timeline.tsx";
+import OutlookPhilosophy from "./components/OutlookPhilosophy.tsx";
 import CodePlayground from "./components/CodePlayground.tsx";
 import SocialHub from "./components/SocialHub.tsx";
 import Contact from "./components/Contact.tsx";
@@ -53,12 +53,12 @@ export default function App() {
 
   const navLinks = [
     { name: "About", href: "#about" },
-    { name: "Architect & Solve", href: "#architect" },
     { name: "Projects", href: "#projects" },
     { name: "Skills", href: "#skills" },
-    { name: "Ledger Engine", href: "#finledger" },
+    { name: "Ledger Demo", href: "#finledger" },
     { name: "GitHub", href: "#github" },
-    { name: "Experience", href: "#experience" },
+    { name: "Milestones", href: "#experience" },
+    { name: "Philosophy & Focus", href: "#philosophy" },
     { name: "Contact", href: "#contact" }
   ];
 
@@ -199,9 +199,6 @@ export default function App() {
           <About />
         </motion.div>
         <motion.div variants={pageSectionVariants}>
-          <ArchitectSolve />
-        </motion.div>
-        <motion.div variants={pageSectionVariants}>
           <Projects />
         </motion.div>
         <motion.div variants={pageSectionVariants}>
@@ -215,6 +212,9 @@ export default function App() {
         </motion.div>
         <motion.div variants={pageSectionVariants}>
           <Timeline />
+        </motion.div>
+        <motion.div variants={pageSectionVariants}>
+          <OutlookPhilosophy />
         </motion.div>
         <motion.div variants={pageSectionVariants}>
           <CodePlayground />
@@ -236,7 +236,7 @@ export default function App() {
               Stephen Baraka
             </span>
             <span className="text-xs text-stone-500 dark:text-slate-400 font-sans">
-              Full-Stack Software Engineer & Accounting IT Student • Maseno University
+              Software Engineer & B.Sc. Accounting & IT Student • Maseno University
             </span>
           </div>
 

@@ -151,7 +151,7 @@ export default function GithubShowcase() {
         </div>
 
         {/* Contribution Heatmap Card */}
-        <div className="bg-stone-50 dark:bg-slate-850 border border-stone-200 dark:border-slate-800 rounded-2xl p-6 mb-10">
+        <div className="bg-white dark:bg-slate-900 border border-stone-200 dark:border-slate-800 rounded-2xl p-6 mb-10">
           <div className="flex items-center justify-between mb-4 text-xs font-mono">
             <span className="font-semibold text-stone-700 dark:text-slate-300 flex items-center gap-2">
               <GitCommit className="h-4 w-4 text-emerald-500" />

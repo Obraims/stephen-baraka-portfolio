@@ -5,10 +5,10 @@ import frontProfileImage from "../assets/images/profile_front.jpg.png";
 
 export default function Hero() {
   const roles = [
+    "Software Engineer",
     "Full-Stack Developer",
-    "Accounting & IT Specialist",
-    "Financial Systems Builder",
-    "Automation & Tool Developer"
+    "AI & Automation Explorer",
+    "Maseno University Undergrad"
   ];
   const [roleIdx, setRoleIdx] = useState(0);
 
@@ -21,9 +21,9 @@ export default function Hero() {
 
   const [activeRightTab, setActiveRightTab] = useState<"card" | "terminal">("card");
   const [terminalLines, setTerminalLines] = useState<string[]>([
-    "System Ready: Stephen Baraka Portfolio Shell",
+    "System Ready: Stephen Baraka Shell",
     "Education: Maseno University — B.Sc. Accounting & Finance with IT",
-    "Type 'help' for a list of available commands.",
+    "Type 'help' for available commands.",
     ""
   ]);
   const [terminalInput, setTerminalInput] = useState("");
@@ -46,10 +46,10 @@ export default function Hero() {
         `$ ${rawCmd}`,
         "AVAILABLE COMMANDS:",
         "  help      - Show available commands",
-        "  bio       - Read background and university specialization",
-        "  skills    - View core tech stack & tools",
-        "  projects  - Show featured production web apps",
-        "  contact   - Display direct reachability nodes",
+        "  bio       - Read background and university studies",
+        "  skills    - View technical stack & tools",
+        "  projects  - Show featured projects",
+        "  contact   - Display contact details",
         "  clear     - Clear terminal history"
       ];
     } else if (cmd === "clear") {
@@ -59,35 +59,36 @@ export default function Hero() {
     } else if (cmd === "bio") {
       response = [
         `$ ${rawCmd}`,
-        "BACKGROUND & SPECIALIZATION:",
+        "BACKGROUND & PROFILE:",
         "  Name      : Stephen Baraka",
-        "  University: Maseno University (Kenya)",
+        "  University: Maseno University, Kenya",
         "  Degree    : B.Sc. Accounting and Finance with IT",
-        "  Focus     : Combining accounting double-entry principles with",
-        "              modern React, TypeScript, Node.js & PostgreSQL software."
+        "  Focus     : Full-stack web development, AI integration,",
+        "              developer automation, and practical software solutions."
       ];
     } else if (cmd === "skills") {
       response = [
         `$ ${rawCmd}`,
-        "TECHNICAL SKILLS:",
-        "  - Frontend: React 19, TypeScript, Tailwind CSS, Vite, Motion",
-        "  - Backend : Node.js, Express, Go, PostgreSQL, REST APIs",
-        "  - Finance : Double-entry bookkeeping, Kenya 16% VAT arithmetic",
-        "  - Tools   : Docker, Git, Vercel, Python automation"
+        "TECHNICAL STACK:",
+        "  - Languages: TypeScript, JavaScript, Python, SQL, HTML/CSS",
+        "  - Frontend : React, Next.js, Tailwind CSS, Vite, Motion",
+        "  - Backend  : Node.js, Express, REST APIs",
+        "  - Databases: PostgreSQL, SQLite",
+        "  - Tools    : Git, Docker, Vercel, Linux CLI"
       ];
     } else if (cmd === "projects") {
       response = [
         `$ ${rawCmd}`,
         "FEATURED PROJECTS:",
-        "  1. Gitvora   : GitHub Portfolio Generator (Vercel Live)",
-        "  2. Dev-Tier  : Developer Tools Tier List Platform (Vercel Live)",
-        "  3. Knightbot : WhatsApp Automation & Microservice Agent",
-        "  4. FinLedger : Double-Entry Ledger & Tax Math Engine"
+        "  1. Gitvora   : GitHub Portfolio Generator & Analytics",
+        "  2. Dev-Tier  : Interactive Developer Tools Tier List",
+        "  3. Knightbot : WhatsApp Automation & Bot",
+        "  4. FinLedger : Double-Entry Bookkeeping Visualizer"
       ];
     } else if (cmd === "contact") {
       response = [
         `$ ${rawCmd}`,
-        "CONTACT NODES:",
+        "CONTACT DETAILS:",
         "  - Email   : obraimssteve@gmail.com",
         "  - GitHub  : github.com/Obraims",
         "  - LinkedIn: linkedin.com/in/stephen-baraka-055b7040b",
@@ -114,7 +115,7 @@ export default function Hero() {
           
           <div className="inline-flex items-center space-x-2 px-3.5 py-1.5 bg-indigo-50 dark:bg-indigo-950/60 text-indigo-700 dark:text-indigo-300 text-xs font-mono font-medium rounded-full border border-indigo-200/60 dark:border-indigo-800/50">
             <span className="h-2 w-2 rounded-full bg-emerald-500 animate-pulse" />
-            <span>Available for Full-Stack & Systems Work</span>
+            <span>Open for Software Engineering Opportunities</span>
           </div>
 
           <div className="space-y-3">
@@ -139,7 +140,7 @@ export default function Hero() {
             </div>
 
             <p className="text-base md:text-lg text-stone-600 dark:text-slate-300 max-w-xl leading-relaxed">
-              B.Sc. Accounting and Finance with IT student at <span className="font-semibold text-stone-800 dark:text-slate-100">Maseno University</span>. I build performant web applications, developer automation tools, and precision financial software.
+              Undergraduate studying B.Sc. Accounting & Finance with IT at <span className="font-semibold text-stone-800 dark:text-slate-100">Maseno University</span>. I build modern full-stack web applications, AI-powered automation, developer tools, and practical software solutions.
             </p>
           </div>
 
@@ -180,18 +181,9 @@ export default function Hero() {
                 <Linkedin className="h-4 w-4" />
               </a>
               <a
-                href="https://wa.me/254743717285"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="p-2.5 bg-emerald-50 hover:bg-emerald-100 dark:bg-emerald-950/50 dark:hover:bg-emerald-900/50 rounded-xl text-emerald-600 dark:text-emerald-400 transition-colors"
-                title="WhatsApp Direct"
-              >
-                <MessageCircle className="h-4 w-4" />
-              </a>
-              <a
                 href="mailto:obraimssteve@gmail.com"
                 className="p-2.5 bg-stone-100 hover:bg-stone-200 dark:bg-slate-800 dark:hover:bg-slate-700 rounded-xl text-stone-700 dark:text-slate-300 transition-colors"
-                title="Email"
+                title="Email Me"
               >
                 <Mail className="h-4 w-4" />
               </a>
@@ -200,11 +192,11 @@ export default function Hero() {
 
         </div>
 
-        {/* RIGHT COLUMN: Switchable Card & Terminal Console */}
-        <div className="lg:col-span-5 flex flex-col items-center justify-center space-y-4">
+        {/* RIGHT COLUMN: Interactive Switcher (Card / CLI) */}
+        <div className="lg:col-span-5 flex flex-col items-center">
           
-          {/* Tab Switcher */}
-          <div className="flex bg-stone-200/70 dark:bg-slate-800/80 p-1 rounded-xl text-xs font-mono">
+          {/* Switch Tabs */}
+          <div className="flex items-center p-1 bg-stone-200/70 dark:bg-slate-800/80 rounded-xl mb-4 text-xs font-mono">
             <button
               onClick={() => setActiveRightTab("card")}
               className={`px-4 py-1.5 rounded-lg font-medium transition-all cursor-pointer ${
@@ -247,14 +239,14 @@ export default function Hero() {
                       Stephen Baraka
                     </h3>
                     <p className="text-xs text-slate-300 mt-1">
-                      Full-Stack Software Engineer & Accounting IT Student
+                      Software Engineer & Accounting IT Student
                     </p>
                   </div>
                 </div>
 
-                <div className="p-3.5 bg-stone-50 dark:bg-slate-850 flex items-center justify-between text-xs font-medium border-t border-stone-200 dark:border-slate-800 text-stone-600 dark:text-slate-400">
-                  <span>📍 Kisumu / Nairobi, Kenya</span>
-                  <span className="text-indigo-600 dark:text-indigo-400 font-mono font-semibold">B.Sc. Accounting & IT</span>
+                <div className="p-3.5 bg-slate-900 dark:bg-slate-950 flex items-center justify-between text-xs font-medium border-t border-slate-800 text-slate-300 dark:text-slate-400">
+                  <span>📍 Kenya</span>
+                  <span className="text-indigo-400 font-mono font-semibold">B.Sc. Accounting & IT</span>
                 </div>
               </div>
             ) : (
@@ -283,20 +275,20 @@ export default function Hero() {
                   <div ref={terminalBottomRef} />
                 </div>
 
-                <form 
+                <form
                   onSubmit={(e) => {
                     e.preventDefault();
                     handleTerminalCommand(terminalInput);
                   }}
-                  className="flex items-center space-x-1.5 border-t border-slate-800 pt-2 mt-2"
+                  className="mt-2 pt-2 border-t border-slate-800/80 flex items-center gap-1 text-[11px]"
                 >
-                  <span className="text-indigo-400 font-bold">$</span>
+                  <span className="text-emerald-400 font-bold">$</span>
                   <input
                     type="text"
                     value={terminalInput}
                     onChange={(e) => setTerminalInput(e.target.value)}
-                    placeholder="Try 'help', 'bio', 'projects'..."
-                    className="flex-1 bg-transparent border-none text-slate-100 outline-none placeholder-slate-600 text-xs"
+                    placeholder="type 'help'..."
+                    className="flex-1 bg-transparent text-slate-100 outline-none font-mono text-[11px]"
                   />
                 </form>
               </div>

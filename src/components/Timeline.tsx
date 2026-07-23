@@ -14,46 +14,46 @@ export default function Timeline() {
     {
       id: "m1",
       year: "2023 - PRESENT",
-      title: "B.Sc. Accounting and Finance with IT",
+      title: "Undergraduate Studies in Accounting & IT",
       company: "Maseno University",
-      description: "Pursuing undergraduate degree combining corporate financial principles with computer science and information technology.",
+      description: "Pursuing a Bachelor of Science degree combining financial principles with computer science and information technology.",
       highlights: [
-        "Mastered corporate GAAP double-entry ledger equations & financial statements.",
-        "Studied database management systems (Relational 3NF SQL schemas).",
-        "Applied software programming logic to financial auditing and tax calculations."
+        "Studied core computer science concepts, database management, and information systems.",
+        "Gained solid grounding in business logic and analytical problem-solving.",
+        "Built software applications alongside coursework to apply classroom concepts in practice."
       ],
       image: profileFenceImage,
-      tech: ["Accounting IT", "GAAP Principles", "Relational SQL", "Tax Systems"],
+      tech: ["Information Technology", "Database Design", "Business Logic", "Software Development"],
       side: "left",
     },
     {
       id: "m2",
       year: "2024 - PRESENT",
-      title: "Full-Stack Web Development & Web Apps",
-      company: "Independent Projects",
-      description: "Designed, engineered, and deployed multiple production web applications, open-source automation tools, and developer platforms.",
+      title: "Full-Stack Web Development",
+      company: "Independent Development",
+      description: "Designing and building full-stack web applications, interactive tools, and developer platforms.",
       highlights: [
-        "Built and deployed Gitvora — dynamic GitHub portfolio analytics platform.",
-        "Engineered Dev-Tier — interactive developer tools ranking tier-list application.",
-        "Developed Knightbot-MD — multi-device WhatsApp automation system."
+        "Built and deployed Gitvora — a dynamic portfolio generator using Next.js and GitHub API.",
+        "Created Dev-Tier — an interactive developer tools tier-list ranking platform.",
+        "Mastered modern frontend engineering with React 19, TypeScript, and Tailwind CSS."
       ],
       image: profileBackImage,
-      tech: ["React 19", "TypeScript", "Next.js", "Tailwind CSS", "Python", "Vercel"],
+      tech: ["React 19", "TypeScript", "Next.js", "Tailwind CSS", "Node.js", "Vercel"],
       side: "right",
     },
     {
       id: "m3",
-      year: "2025 - PRESENT",
-      title: "Financial Systems & Backend Engineering",
-      company: "FinTech & Developer Solutions",
-      description: "Specializing in precision financial software tools, REST APIs, and high-performance database architectures.",
+      year: "2024 - PRESENT",
+      title: "Automation & Developer Tools",
+      company: "Open Source & Personal Projects",
+      description: "Exploring backend API engineering, automation scripts, and interactive tools.",
       highlights: [
-        "Implemented integer minor-unit arithmetic for zero-error VAT 16% tax calculation.",
-        "Constructed Node.js / Express REST API microservices with JWT security.",
-        "Built responsive data visualization dashboards with Recharts and Motion."
+        "Developed Knightbot-MD — a modular WhatsApp automation bot.",
+        "Created FinLedger — a client-side financial ledger visualization tool.",
+        "Continuously exploring AI integration, API development, and developer tooling."
       ],
       image: profileFrontImage,
-      tech: ["Node.js", "Express", "PostgreSQL", "Go", "Docker", "Recharts"],
+      tech: ["Python", "Node.js", "Express", "PostgreSQL", "Docker", "REST APIs"],
       side: "left",
     },
   ];

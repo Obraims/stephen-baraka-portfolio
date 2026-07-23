@@ -1,68 +1,57 @@
 import React from "react";
 import { motion } from "motion/react";
-import { Code, Cpu, PieChart, Wrench } from "lucide-react";
+import { Code, Cpu, Database, Cloud, Terminal, Sparkles, Wrench, Layers } from "lucide-react";
 
-interface SkillItem {
-  name: string;
-  desc: string;
-}
-
-interface Category {
+interface SkillCategory {
   name: string;
   icon: any;
   accentColor: string;
-  skills: SkillItem[];
+  skills: string[];
 }
 
 export default function Skills() {
-  const categories: Category[] = [
+  const categories: SkillCategory[] = [
     {
-      name: "Frontend Engineering",
+      name: "Languages",
       icon: Code,
-      accentColor: "text-indigo-600 dark:text-indigo-400",
-      skills: [
-        { name: "React 19 & Vite", desc: "Building fast, reactive single-page interfaces with clean component architectures." },
-        { name: "TypeScript", desc: "Strict static typing, interfaces, and compile-time bug prevention." },
-        { name: "Tailwind CSS v4", desc: "Responsive utility-first styling and custom design systems." },
-        { name: "Framer Motion", desc: "Hardware-accelerated micro-animations and smooth layout transitions." },
-        { name: "Recharts & D3.js", desc: "Transforming raw financial datasets into intuitive interactive visual charts." }
-      ]
+      accentColor: "text-indigo-600 dark:text-indigo-400 border-indigo-500/20 bg-indigo-50 dark:bg-indigo-950/50",
+      skills: ["TypeScript", "JavaScript (ES6+)", "Python", "SQL", "HTML5", "CSS3"]
     },
     {
-      name: "Backend & Databases",
+      name: "Frontend",
+      icon: Layers,
+      accentColor: "text-cyan-600 dark:text-cyan-400 border-cyan-500/20 bg-cyan-50 dark:bg-cyan-950/50",
+      skills: ["React", "Next.js", "Tailwind CSS", "Framer Motion", "Vite", "Recharts"]
+    },
+    {
+      name: "Backend",
       icon: Cpu,
-      accentColor: "text-emerald-600 dark:text-emerald-400",
-      skills: [
-        { name: "Node.js & Express", desc: "Designing REST APIs, middleware routines, and server microservices." },
-        { name: "Go (Golang)", desc: "High-concurrency API handlers and performant backend services." },
-        { name: "PostgreSQL", desc: "Normalized relational schemas (3NF), queries, and data integrity." },
-        { name: "JWT Auth & Security", desc: "Stateless user authentication using secure access/refresh token patterns." },
-        { name: "REST API Design", desc: "Structured endpoints with Zod validation, error handling, and documentation." }
-      ]
+      accentColor: "text-emerald-600 dark:text-emerald-400 border-emerald-500/20 bg-emerald-50 dark:bg-emerald-950/50",
+      skills: ["Node.js", "Express.js", "RESTful APIs", "JWT Auth", "Middleware Routing"]
     },
     {
-      name: "Finance & Accounting IT",
-      icon: PieChart,
-      accentColor: "text-amber-600 dark:text-amber-400",
-      skills: [
-        { name: "Double-Entry Bookkeeping", desc: "Strict GAAP ledger reconciliation where Assets = Liabilities + Equity." },
-        { name: "Kenya 16% VAT Tax Math", desc: "Integer-based arithmetic algorithms for calculating pre-tax and output VAT." },
-        { name: "Financial Reporting", desc: "Generating automated income statements, balance sheets, and cash flow views." },
-        { name: "System Auditing", desc: "Verifying audit logs, transaction histories, and internal controls." },
-        { name: "Amortization Math", desc: "Calculating loan schedules and debt service without floating-point errors." }
-      ]
+      name: "Databases",
+      icon: Database,
+      accentColor: "text-amber-600 dark:text-amber-400 border-amber-500/20 bg-amber-50 dark:bg-amber-950/50",
+      skills: ["PostgreSQL", "SQLite", "Relational Schema Design (3NF)", "Query Optimization"]
     },
     {
-      name: "Tools & DevOps",
+      name: "Cloud & DevOps",
+      icon: Cloud,
+      accentColor: "text-violet-600 dark:text-violet-400 border-violet-500/20 bg-violet-50 dark:bg-violet-950/50",
+      skills: ["Vercel", "Docker", "Git & GitHub", "Linux CLI", "CI/CD Deployment"]
+    },
+    {
+      name: "AI & Automation",
+      icon: Sparkles,
+      accentColor: "text-rose-600 dark:text-rose-400 border-rose-500/20 bg-rose-50 dark:bg-rose-950/50",
+      skills: ["AI API Integrations (Gemini / OpenAI)", "Python Automation Scripts", "Web Scraping (Baileys)"]
+    },
+    {
+      name: "Developer Tools",
       icon: Wrench,
-      accentColor: "text-violet-600 dark:text-violet-400",
-      skills: [
-        { name: "Docker Containers", desc: "Packaging full-stack services into isolated container environments." },
-        { name: "Git & GitHub", desc: "Version control, pull-request workflows, and CI/CD pipelines." },
-        { name: "Python Scripting", desc: "Automation scripts, data manipulation, and web scraping utilities." },
-        { name: "Linux & Shell", desc: "Command line administration, bash scripts, and server deployment." },
-        { name: "Vercel & Cloud", desc: "Deploying and managing production frontend and serverless environments." }
-      ]
+      accentColor: "text-blue-600 dark:text-blue-400 border-blue-500/20 bg-blue-50 dark:bg-blue-950/50",
+      skills: ["VS Code", "Postman API Suite", "npm / pnpm", "Chrome DevTools", "Zod Validation"]
     }
   ];
 
@@ -76,18 +65,19 @@ export default function Skills() {
         {/* Section Heading */}
         <div className="max-w-2xl mb-14">
           <div className="inline-flex items-center space-x-1.5 px-3 py-1 bg-indigo-50 dark:bg-indigo-950/50 text-indigo-600 dark:text-indigo-300 text-xs font-mono font-semibold rounded-full uppercase tracking-wider mb-3">
-            <span>Technical Capabilities</span>
+            <Wrench className="h-3.5 w-3.5" />
+            <span>Technical Stack</span>
           </div>
           <h2 className="text-3xl md:text-4xl font-display font-bold text-stone-900 dark:text-white">
-            Skills & Expertise
+            Skills & Technologies
           </h2>
           <p className="text-stone-600 dark:text-slate-400 font-sans mt-2 text-base">
-            Combining software engineering proficiency with academic knowledge in finance and IT.
+            Technologies and tools I actively use in my development workflow.
           </p>
         </div>
 
-        {/* 4 Skill Categories */}
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
+        {/* Organized Category Grid */}
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
           {categories.map((category, catIdx) => {
             const Icon = category.icon;
             return (
@@ -96,32 +86,27 @@ export default function Skills() {
                 initial={{ opacity: 0, y: 15 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
-                transition={{ delay: catIdx * 0.08, duration: 0.4 }}
-                className="p-6 bg-stone-50/60 dark:bg-slate-800/60 border border-stone-200/80 dark:border-slate-700/80 rounded-2xl flex flex-col justify-between"
+                transition={{ delay: catIdx * 0.05, duration: 0.35 }}
+                className="p-6 bg-stone-50/70 dark:bg-slate-800/60 border border-stone-200/80 dark:border-slate-700/70 rounded-2xl flex flex-col justify-between"
               >
                 <div>
-                  <div className="flex items-center space-x-3 mb-5">
-                    <div className={`p-2 rounded-xl bg-white dark:bg-slate-900 border border-stone-200 dark:border-slate-700 ${category.accentColor}`}>
+                  <div className="flex items-center space-x-3 mb-4">
+                    <div className={`p-2.5 rounded-xl border ${category.accentColor}`}>
                       <Icon className="h-5 w-5" />
                     </div>
-                    <h3 className="text-lg font-display font-bold text-stone-900 dark:text-white">
+                    <h3 className="text-base font-display font-bold text-stone-900 dark:text-white">
                       {category.name}
                     </h3>
                   </div>
 
-                  <div className="space-y-3">
+                  <div className="flex flex-wrap gap-2 pt-1">
                     {category.skills.map((skill) => (
-                      <div 
-                        key={skill.name} 
-                        className="p-3 bg-white dark:bg-slate-900/80 border border-stone-200/60 dark:border-slate-700/60 rounded-xl"
+                      <span 
+                        key={skill}
+                        className="px-3 py-1.5 bg-white dark:bg-slate-900/90 border border-stone-200/80 dark:border-slate-700/80 rounded-lg text-xs font-mono font-medium text-stone-700 dark:text-slate-300 shadow-2xs"
                       >
-                        <h4 className="text-xs font-mono font-bold text-stone-900 dark:text-slate-100">
-                          {skill.name}
-                        </h4>
-                        <p className="text-xs text-stone-600 dark:text-slate-400 mt-1 leading-relaxed">
-                          {skill.desc}
-                        </p>
-                      </div>
+                        {skill}
+                      </span>
                     ))}
                   </div>
                 </div>
