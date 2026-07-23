@@ -1,44 +1,35 @@
-export interface Project {
-  id: number | string;
+/**
+ * @license
+ * SPDX-License-Identifier: Apache-2.0
+ */
+
+export interface Milestone {
+  id: string;
+  year: string;
   title: string;
-  slug: string;
-  shortDesc: string;
-  fullDesc: string;
-  problem: string;
-  solution: string;
-  tech: string[];
-  image: string;
-  demoUrl?: string;
-  githubUrl: string;
-  highlights: string[];
-  learning: string[];
-  timeline: string;
-  featured: boolean;
-  category: "Fullstack" | "Frontend" | "Finance & IT";
-}
-
-export interface SkillItem {
-  name: string;
-  level: "Beginner" | "Intermediate" | "Advanced";
-  experience: string;
-  icon?: string;
-}
-
-export interface SkillCategory {
-  category: string;
-  color: string;
-  skills: SkillItem[];
-}
-
-export interface GitHubCommit {
-  repo: string;
-  message: string;
-  date: string;
-  sha: string;
-}
-
-export interface InteractiveTerminalCommand {
-  command: string;
+  company: string;
   description: string;
-  output: string | string[] | (() => string | string[]);
+  highlights: string[];
+  image: string;
+  tech: string[];
+  side: "left" | "right";
+}
+
+export interface CodeSnippet {
+  id: string;
+  title: string;
+  filename: string;
+  description: string;
+  icon: string;
+  code: string;
+  language: string;
+}
+
+export interface ContactMessage {
+  id: string;
+  name: string;
+  email: string;
+  subject: string;
+  message: string;
+  timestamp: string;
 }

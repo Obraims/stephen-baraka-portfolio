@@ -1,111 +1,84 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Space+Grotesk:wght@500;600;700&family=JetBrains+Mono:wght@400;500;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Plus+Jakarta+Sans:wght@500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap');
 @import "tailwindcss";
 
 @theme {
   --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
-  --font-display: "Space Grotesk", sans-serif;
+  --font-display: "Plus Jakarta Sans", sans-serif;
   --font-mono: "JetBrains Mono", ui-monospace, SFMono-Regular, monospace;
 
-  /* Highly Tactical Hyper-Neon Tech Colors */
-  --color-cyber-blue: #38bdf8;
-  --color-cyber-cyan: #00f3ff;
-  --color-cyber-green: #39ff14;
-  --color-cyber-emerald: #10b981;
-  --color-cyber-dark: #030712;
-  --color-cyber-gray: #0b1121;
-  --color-cyber-purple: #a855f7;
+  /* Custom Color Tokens */
+  --color-sand-bg: #fafafa;
+  --color-sand-card: #ffffff;
+  --color-sand-border: #e4e4e7;
+  --color-lilac-accent: #6366f1;
+  --color-zinc-deep: #09090b;
+
+  --color-slate-bg: #090d16;
+  --color-slate-card: #111827;
+  --color-slate-border: #1f2937;
 }
 
-/* Custom styles for an elegant tech-noir experience */
 html, body {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  overflow-x: hidden;
-  font-family: var(--font-sans);
-  background-color: var(--color-cyber-dark);
-  color: #f8fafc;
   scroll-behavior: smooth;
+  overflow-x: hidden;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* Background Grid Overlay */
+.bg-grid-pattern {
+  background-size: 32px 32px;
+  background-image: 
+    linear-gradient(to right, rgba(120, 119, 198, 0.05) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(120, 119, 198, 0.05) 1px, transparent 1px);
+}
+
+.dark .bg-grid-pattern {
+  background-size: 32px 32px;
+  background-image: 
+    linear-gradient(to right, rgba(255, 255, 255, 0.03) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(255, 255, 255, 0.03) 1px, transparent 1px);
+}
+
+.bg-dots-pattern {
+  background-image: radial-gradient(rgba(0, 0, 0, 0.08) 1px, transparent 1px);
+  background-size: 20px 20px;
+}
+
+.dark .bg-dots-pattern {
+  background-image: radial-gradient(rgba(255, 255, 255, 0.08) 1px, transparent 1px);
+  background-size: 20px 20px;
 }
 
 /* Custom Scrollbar */
 ::-webkit-scrollbar {
-  width: 8px;
-  height: 8px;
+  width: 7px;
+  height: 7px;
 }
 
 ::-webkit-scrollbar-track {
-  background: #02040a;
+  background: transparent;
 }
 
 ::-webkit-scrollbar-thumb {
-  background: #0b1329;
-  border: 1px solid #111a36;
-  border-radius: 4px;
+  background: #cbd5e1;
+  border-radius: 9999px;
+}
+
+.dark ::-webkit-scrollbar-thumb {
+  background: #334155;
+  border-radius: 9999px;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: #00f3ff;
+  background: #94a3b8;
 }
 
-/* Smooth selection colors */
-::selection {
-  background-color: rgba(0, 243, 255, 0.25);
-  color: #00f3ff;
+.dark ::-webkit-scrollbar-thumb:hover {
+  background: #475569;
 }
 
-/* Custom scanlines for retro-gaming vibe on matching terminals */
-@keyframes scanline {
-  0% { transform: translateY(-100%); }
-  100% { transform: translateY(100%); }
-}
-
-.scanline::after {
-  content: " ";
-  display: block;
-  position: absolute;
-  top: 0; left: 0; bottom: 0; right: 0;
-  background: linear-gradient(rgba(18, 16, 16, 0) 50%, rgba(0, 0, 0, 0.35) 50%), linear-gradient(90deg, rgba(0, 243, 255, 0.03), rgba(57, 255, 20, 0.02), rgba(168, 85, 247, 0.03));
-  z-index: 2;
-  background-size: 100% 3px, 4px 100%;
+/* Subtle Glow Blur */
+.glow-blur {
+  filter: blur(100px);
   pointer-events: none;
-}
-
-/* High-fidelity glowing chassis */
-.glowing-glow {
-  box-shadow: 0 0 35px rgba(0, 243, 255, 0.15);
-  border-color: rgba(0, 243, 255, 0.3);
-}
-
-.glowing-glow-green {
-  box-shadow: 0 0 35px rgba(57, 255, 20, 0.15);
-  border-color: rgba(57, 255, 20, 0.3);
-}
-
-/* Kinetic Digital Grid Matrix Effect */
-.bg-cyber-grid {
-  background-size: 40px 40px;
-  background-image: 
-    linear-gradient(to right, rgba(0, 243, 255, 0.04) 1px, transparent 1px),
-    linear-gradient(to bottom, rgba(0, 243, 255, 0.04) 1px, transparent 1px);
-}
-
-/* Sophisticated Circular Clip-Path Reveal Transition for Dark Mode Toggle */
-.theme-reveal-enter {
-  clip-path: circle(0% at 90% 10%);
-  transition: clip-path 0.8s cubic-bezier(0.4, 0, 0.2, 1);
-}
-
-.theme-reveal-active {
-  clip-path: circle(150% at 90% 10%);
-}
-
-/* Pulse Glow Keyframes */
-@keyframes pulseGlow {
-  0%, 100% { opacity: 0.3; transform: scale(1); }
-  50% { opacity: 0.6; transform: scale(1.05); }
-}
-
-.animate-pulse-glow {
-  animation: pulseGlow 4s infinite ease-in-out;
 }

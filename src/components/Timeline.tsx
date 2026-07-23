@@ -1,144 +1,157 @@
-import React from "react";
+import { Calendar, CheckCircle2, GraduationCap, MapPin, Code } from "lucide-react";
 import { motion } from "motion/react";
-import { GraduationCap, Briefcase, Code, Terminal, Sparkles, CheckCircle2, ChevronRight } from "lucide-react";
+import { useRef } from "react";
+import { Milestone } from "../types";
+
+import profileBackImage from "../assets/images/profile_back.jpg.png";
+import profileFenceImage from "../assets/images/profile_fence.jpg.png";
+import profileFrontImage from "../assets/images/profile_front.jpg.png";
 
 export default function Timeline() {
-  const milestones = [
+  const containerRef = useRef<HTMLDivElement>(null);
+
+  const milestones: Milestone[] = [
     {
       id: "m1",
-      period: "Jan 2025 – Present",
-      status: "ACTIVE NODE",
-      title: "Full-Stack Software Lead · System Architect",
-      organization: "Independent Development & Open Source",
-      description: "Leading the development of responsive web applications, FinTech visualizers, and developer tools. Writing clean TypeScript, Next.js, and containerized microservices.",
+      year: "2023 - PRESENT",
+      title: "Undergraduate Studies in Accounting & IT",
+      company: "Maseno University",
+      description: "Pursuing a Bachelor of Science degree combining financial principles with computer science and information technology.",
       highlights: [
-        "Built Gitvora — live GitHub portfolio generator & analytics dashboard.",
-        "Created Dev-Tier — interactive developer tools tier-list ranking platform.",
-        "Designed FinLedger — zero-error double-entry ledger calculation engine."
+        "Studied core computer science concepts, database management, and information systems.",
+        "Gained solid grounding in business logic and analytical problem-solving.",
+        "Built software applications alongside coursework to apply classroom concepts in practice."
       ],
-      tech: ["TypeScript", "Next.js", "React 19", "Node.js", "PostgreSQL", "Docker"]
+      image: profileFenceImage,
+      tech: ["Information Technology", "Database Design", "Business Logic", "Software Development"],
+      side: "left",
     },
     {
       id: "m2",
-      period: "Jan 2024 – Dec 2024",
-      status: "REPOS COMPILED",
-      title: "Open-Source Systems Contributor & Backend Developer",
-      organization: "Personal Projects & Developer Tools",
-      description: "Explored API engineering, database schema normalization, and automated messaging infrastructure.",
+      year: "2024 - PRESENT",
+      title: "Full-Stack Web Development",
+      company: "Independent Development",
+      description: "Designing and building full-stack web applications, interactive tools, and developer platforms.",
       highlights: [
-        "Engineered Knightbot-MD — containerized WhatsApp automation microservice.",
-        "Built RESTful API services with express request validation & JWT authentication.",
-        "Optimized client-side rendering with Tailwind CSS and Framer Motion."
+        "Built and deployed Gitvora — a dynamic portfolio generator using Next.js and GitHub API.",
+        "Created Dev-Tier — an interactive developer tools tier-list ranking platform.",
+        "Mastered modern frontend engineering with React 19, TypeScript, and Tailwind CSS."
       ],
-      tech: ["Python", "Node.js", "Express", "Baileys API", "Docker", "Linux"]
+      image: profileBackImage,
+      tech: ["React 19", "TypeScript", "Next.js", "Tailwind CSS", "Node.js", "Vercel"],
+      side: "right",
     },
     {
       id: "m3",
-      period: "Sep 2023 – Present",
-      status: "ACADEMIC LOG",
-      title: "Undergraduate Student — B.Sc. Accounting & Finance with IT",
-      organization: "Maseno University, Kenya",
-      description: "Combining formal financial theory, auditing discipline, and GAAP accounting rules with computer science and software development.",
+      year: "2024 - PRESENT",
+      title: "Automation & Developer Tools",
+      company: "Open Source & Personal Projects",
+      description: "Exploring backend API engineering, automation scripts, and interactive tools.",
       highlights: [
-        "Mastered double-entry ledger bookkeeping, financial statement analysis, and auditing rules.",
-        "Applied database normal forms (3NF) and SQL relational schema design to business software.",
-        "Bridged business finance and IT to build practical software solutions."
+        "Developed Knightbot-MD — a modular WhatsApp automation bot.",
+        "Created FinLedger — a client-side financial ledger visualization tool.",
+        "Continuously exploring AI integration, API development, and developer tooling."
       ],
-      tech: ["Accounting Math", "Financial Reporting", "Database Design", "SQL", "Business Logic"]
-    }
+      image: profileFrontImage,
+      tech: ["Python", "Node.js", "Express", "PostgreSQL", "Docker", "REST APIs"],
+      side: "left",
+    },
   ];
 
   return (
     <section 
-      id="journey" 
-      className="relative py-20 px-4 sm:px-6 lg:px-8 bg-[#030712] border-b border-slate-800/80 transition-colors select-none"
+      id="experience" 
+      ref={containerRef}
+      className="relative py-20 px-6 md:px-12 lg:px-24 bg-stone-50 dark:bg-slate-950/40 border-b border-stone-200 dark:border-slate-800 transition-colors"
     >
-      <div className="max-w-7xl mx-auto space-y-16">
+      <div className="max-w-7xl w-full mx-auto relative">
         
         {/* Section Heading */}
-        <div className="max-w-3xl mx-auto text-center space-y-3">
-          <div className="inline-flex items-center space-x-2 px-3 py-1 bg-cyan-950/60 text-cyan-400 text-xs font-mono font-semibold rounded-full border border-cyan-800/40 uppercase tracking-wider">
-            <Briefcase className="w-3.5 h-3.5" />
-            <span>Chronology of Specialties</span>
+        <div className="max-w-2xl mb-16">
+          <div className="inline-flex items-center space-x-1.5 px-3 py-1 bg-indigo-50 dark:bg-indigo-950/50 text-indigo-600 dark:text-indigo-300 text-xs font-mono font-semibold rounded-full uppercase tracking-wider mb-3">
+            <GraduationCap className="h-3.5 w-3.5" />
+            <span>Journey & Education</span>
           </div>
-
-          <h2 className="text-3xl md:text-4xl font-display font-bold text-white">
-            Stephen's Career Operations & Milestones
+          <h2 className="text-3xl md:text-4xl font-display font-bold text-stone-900 dark:text-white">
+            Academic & Software Engineering Milestones
           </h2>
-
-          <p className="text-slate-400 font-sans text-sm md:text-base leading-relaxed">
-            My academic timeline at Maseno University and software engineering milestones.
+          <p className="text-stone-600 dark:text-slate-400 font-sans mt-2 text-base">
+            Key milestones in education at Maseno University and full-stack software development.
           </p>
         </div>
 
-        {/* Milestone Map Timeline */}
-        <div className="relative max-w-4xl mx-auto">
-          {/* Center Vertical Line */}
-          <div className="absolute left-4 md:left-1/2 top-0 bottom-0 w-0.5 bg-slate-800 transform -translate-x-1/2 hidden md:block"></div>
-
-          <div className="space-y-12">
-            {milestones.map((m, idx) => (
-              <motion.div
-                key={m.id}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.5, delay: idx * 0.1 }}
-                className={`relative flex flex-col md:flex-row items-center ${
-                  idx % 2 === 0 ? "md:flex-row-reverse" : ""
-                }`}
+        {/* Milestones Container */}
+        <div className="space-y-16">
+          {milestones.map((milestone, index) => {
+            const isEven = milestone.side === "left";
+            
+            return (
+              <div 
+                key={milestone.id} 
+                className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center bg-white dark:bg-slate-900 border border-stone-200/80 dark:border-slate-800 rounded-2xl p-6 md:p-8 shadow-xs"
               >
-                {/* Center Node Marker */}
-                <div className="absolute left-4 md:left-1/2 top-6 transform -translate-x-1/2 z-10 hidden md:flex items-center justify-center">
-                  <div className="w-4 h-4 rounded-full bg-cyan-500 border-4 border-slate-950 shadow-md animate-pulse"></div>
-                </div>
-
-                {/* Milestone Card */}
-                <div className="w-full md:w-1/2 md:px-8">
-                  <div className="bg-slate-900/80 border border-slate-800 rounded-2xl p-6 shadow-xl space-y-4 hover:border-slate-700 transition">
-                    <div className="flex items-center justify-between">
-                      <span className="text-xs font-mono font-semibold text-cyan-400 bg-cyan-950/60 px-2.5 py-1 rounded-full border border-cyan-800/40">
-                        {m.period}
-                      </span>
-                      <span className="text-[10px] font-mono text-slate-400 uppercase font-bold">
-                        {m.status}
-                      </span>
-                    </div>
-
-                    <div>
-                      <h3 className="text-lg font-bold font-display text-white">
-                        {m.title}
-                      </h3>
-                      <p className="text-xs font-mono text-slate-400 mt-0.5">
-                        {m.organization}
-                      </p>
-                    </div>
-
-                    <p className="text-xs text-slate-300 leading-relaxed font-sans">
-                      {m.description}
-                    </p>
-
-                    <div className="space-y-2 pt-1">
-                      {m.highlights.map((h, i) => (
-                        <div key={i} className="flex items-start gap-2 text-xs text-slate-300">
-                          <CheckCircle2 className="w-3.5 h-3.5 text-emerald-400 shrink-0 mt-0.5" />
-                          <span>{h}</span>
-                        </div>
-                      ))}
-                    </div>
-
-                    <div className="flex flex-wrap gap-1.5 pt-2 border-t border-slate-800/60">
-                      {m.tech.map((t) => (
-                        <span key={t} className="px-2 py-0.5 bg-slate-950 text-slate-400 font-mono text-[10px] rounded border border-slate-800">
-                          {t}
-                        </span>
-                      ))}
+                
+                {/* Image Col */}
+                <div className={`lg:col-span-5 ${isEven ? "lg:order-1" : "lg:order-2"}`}>
+                  <div className="relative rounded-xl overflow-hidden h-64 border border-stone-200 dark:border-slate-800 bg-stone-100 dark:bg-slate-950">
+                    <img 
+                      src={milestone.image} 
+                      alt={milestone.title}
+                      referrerPolicy="no-referrer"
+                      className="object-cover object-top w-full h-full"
+                    />
+                    <div className="absolute inset-0 bg-gradient-to-t from-slate-950/60 via-transparent to-transparent" />
+                    <div className="absolute bottom-4 left-4 text-white font-display text-sm font-bold">
+                      {milestone.company}
                     </div>
                   </div>
                 </div>
-              </motion.div>
-            ))}
-          </div>
+
+                {/* Info Col */}
+                <div className={`lg:col-span-7 space-y-4 ${isEven ? "lg:order-2" : "lg:order-1"}`}>
+                  <div className="flex flex-wrap items-center justify-between gap-2">
+                    <span className="inline-flex items-center space-x-1.5 px-3 py-1 rounded-md bg-stone-100 dark:bg-slate-800 text-xs font-mono font-semibold text-stone-700 dark:text-slate-300">
+                      <Calendar className="h-3.5 w-3.5" />
+                      <span>{milestone.year}</span>
+                    </span>
+                    <span className="text-xs font-mono text-stone-500 flex items-center gap-1">
+                      <MapPin className="h-3.5 w-3.5" />
+                      {milestone.company}
+                    </span>
+                  </div>
+
+                  <h3 className="text-xl md:text-2xl font-display font-bold text-stone-900 dark:text-white">
+                    {milestone.title}
+                  </h3>
+                  
+                  <p className="text-stone-600 dark:text-slate-300 text-sm leading-relaxed">
+                    {milestone.description}
+                  </p>
+
+                  <ul className="space-y-2 pt-1">
+                    {milestone.highlights.map((bullet, bIdx) => (
+                      <li key={bIdx} className="flex items-start text-stone-700 dark:text-slate-300 text-xs md:text-sm">
+                        <CheckCircle2 className="h-4 w-4 text-emerald-500 mr-2 mt-0.5 shrink-0" />
+                        <span>{bullet}</span>
+                      </li>
+                    ))}
+                  </ul>
+
+                  <div className="flex flex-wrap gap-1.5 pt-3 border-t border-stone-100 dark:border-slate-800">
+                    {milestone.tech.map((tech) => (
+                      <span 
+                        key={tech} 
+                        className="px-2.5 py-0.5 bg-stone-100 dark:bg-slate-800 rounded text-xs font-mono font-medium text-stone-700 dark:text-slate-300"
+                      >
+                        {tech}
+                      </span>
+                    ))}
+                  </div>
+                </div>
+
+              </div>
+            );
+          })}
         </div>
 
       </div>

@@ -16,17 +16,17 @@ export default function CodePlayground() {
   const snippets: Snippet[] = [
     {
       id: "vat-engine",
-      title: "Financial Tax Calculator",
+      title: "Kenya 16% VAT Math Engine",
       language: "typescript",
       description: "Integer minor-unit (cents) arithmetic algorithm for computing pre-tax and output VAT values without floating point errors.",
-      code: `// Financial Output VAT Tax Extractor (Minor Unit Integer Math)
+      code: `// Kenya 16% Output VAT Tax Extractor (Minor Unit Integer Math)
 export interface TaxBreakdown {
   preTaxCents: bigint;
   vatCents: bigint;
   totalCents: bigint;
 }
 
-export function computeVAT(grossCents: bigint): TaxBreakdown {
+export function computeKenyaVAT(grossCents: bigint): TaxBreakdown {
   if (grossCents <= 0n) {
     throw new Error("Invoice total must be positive");
   }
