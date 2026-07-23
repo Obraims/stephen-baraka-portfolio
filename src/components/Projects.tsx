@@ -34,8 +34,8 @@ export default function Projects() {
       id: "gitvora",
       title: "Gitvora",
       tag: "GitHub Portfolio Generator",
-      desc: "A dynamic platform that connects with GitHub to auto-generate developer portfolios and track repository analytics.",
-      longDesc: "Gitvora automates software portfolio creation by fetching live repository data, contribution graphs, and repository stats via the GitHub API. Built with Next.js and React for smooth client-side performance.",
+      desc: "A dynamic web application that connects via GitHub API to generate developer portfolios and track repository analytics.",
+      longDesc: "Problem Solved: Developers spend excessive time manually formatting portfolio sites. Why I Built It: To automate profile creation directly from live GitHub activity. Value Created: Fetches real-time repository metadata, contribution trends, and follower insights in a clean dashboard. Technologies: Next.js, React, GitHub API, Tailwind CSS, Vercel.",
       tech: ["Next.js", "React", "GitHub API", "Tailwind CSS", "Vercel"],
       metrics: [
         { label: "Data Sync", value: "Realtime" },
@@ -52,8 +52,8 @@ export default function Projects() {
       id: "dev-tier",
       title: "Dev-Tier",
       tag: "Developer Tools Platform",
-      desc: "An interactive tier-list platform for developers to rate, review, and rank development tools and frameworks.",
-      longDesc: "Dev-Tier allows software engineers to evaluate and discover effective development tools across multiple categories. Features interactive tier creation, community voting, and responsive category filtering.",
+      desc: "An interactive tier-list platform for software engineers to evaluate, review, and rank development tools.",
+      longDesc: "Problem Solved: Choosing the right developer tooling is fragmented across blogs and forums. Why I Built It: To provide a centralized, interactive tier-list evaluation platform for developer tools. Value Created: Allows engineers to rank libraries, frameworks, and CLI tools with responsive drag-and-drop category filtering. Technologies: React, TypeScript, Tailwind CSS, Node.js, PostgreSQL.",
       tech: ["React", "TypeScript", "Tailwind CSS", "Node.js", "PostgreSQL"],
       metrics: [
         { label: "UI Response", value: "< 50ms" },
@@ -69,9 +69,9 @@ export default function Projects() {
     {
       id: "knightbot-md",
       title: "Knightbot-MD",
-      tag: "WhatsApp Automation & Bot",
-      desc: "A modular multi-device WhatsApp automation system and command bot built with Python and containerized services.",
-      longDesc: "Knightbot-MD handles automated command handling, scheduled messages, event listening, and sandboxed execution across multi-device WhatsApp protocols. Designed for stability and low resource overhead.",
+      tag: "Automation & Bot Microservice",
+      desc: "A modular WhatsApp automation system and command bot built with Python and containerized services.",
+      longDesc: "Problem Solved: Managing automated client notifications and scheduled messaging can be complex. Why I Built It: To explore containerized microservices and automated messaging pipelines. Value Created: Provides low-latency automated command execution, scheduled triggers, and isolated multi-device event listening. Technologies: Python, Docker, Node.js, Baileys API, Linux.",
       tech: ["Python", "Docker", "Node.js", "Baileys API", "Linux"],
       metrics: [
         { label: "Uptime", value: "99.9%" },
@@ -86,9 +86,9 @@ export default function Projects() {
     {
       id: "finledger-engine",
       title: "FinLedger",
-      tag: "Ledger Visualization & Math Tool",
+      tag: "Financial Ledger Tool",
       desc: "An interactive financial ledger visualization tool that parses transaction logs and displays balance sheets, income statements, and tax breakdowns.",
-      longDesc: "FinLedger is a personal project exploring double-entry ledger bookkeeping algorithms and data visualization. It parses transaction logs into interactive charts for income statements, balance sheets, and tax breakdowns with zero floating-point arithmetic errors.",
+      longDesc: "Problem Solved: Traditional accounting desktop software is clunky and hard to visualize in modern web browsers. Why I Built It: To apply double-entry ledger math and data visualization to financial data. Value Created: Parses CSV transaction logs into interactive Recharts views for income statements, balance sheets, and tax breakdowns with integer-precision math. Technologies: TypeScript, React, Recharts, Tailwind CSS.",
       tech: ["TypeScript", "React", "Recharts", "Tailwind CSS"],
       metrics: [
         { label: "Data Parsing", value: "CSV & JSON" },

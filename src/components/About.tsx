@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { motion } from "motion/react";
-import { GraduationCap, CheckCircle2, Heart, Code2, Sparkles, Terminal } from "lucide-react";
+import { GraduationCap, CheckCircle2, Heart, Code2, Sparkles, Landmark, Layers } from "lucide-react";
 
 function CountUp({ max, duration = 1000 }: { max: number; duration?: number }) {
   const [count, setCount] = useState(0);
@@ -40,38 +40,38 @@ export default function About() {
         <div className="lg:col-span-7 space-y-6">
           <div className="inline-flex items-center space-x-2 px-3 py-1 bg-indigo-50 dark:bg-indigo-950/50 text-indigo-600 dark:text-indigo-300 text-xs font-mono font-semibold rounded-full uppercase tracking-wider">
             <Sparkles className="h-3.5 w-3.5 text-indigo-500" />
-            <span>About Me</span>
+            <span>Who I Am</span>
           </div>
 
           <h2 className="text-3xl md:text-4xl font-display font-bold text-stone-900 dark:text-white">
-            Driven by Curiosity & Real-World Problem Solving
+            Engineering Software with Financial & Business Intelligence
           </h2>
 
           <div className="space-y-4 text-stone-600 dark:text-slate-300 text-base leading-relaxed">
             <p>
-              I'm <strong className="text-stone-900 dark:text-white">Stephen Baraka</strong>, an undergraduate student at <strong className="text-stone-900 dark:text-white">Maseno University</strong> pursuing a Bachelor of Science in Accounting & Finance with Information Technology.
+              I am <strong className="text-stone-900 dark:text-white">Stephen Baraka</strong>, a Financial Software Engineer pursuing a Bachelor of Science in Accounting & Finance with Information Technology at <strong className="text-stone-900 dark:text-white">Maseno University</strong>.
             </p>
 
             <p>
-              My journey in software engineering is fueled by a genuine passion for building useful products. Whether it's crafting reactive web frontends, designing robust REST APIs, automating workflows, or experimenting with modern AI frameworks, I thrive on turning ideas into functional, performant code.
+              My interest in software engineering grew out of a desire to build things that work seamlessly. As I studied accounting and financial systems, I realized that modern business logic, bookkeeping rules, and financial workflows are fundamentally software problems waiting for clean, reliable digital solutions.
             </p>
 
             <p>
-              Rather than getting caught up in corporate jargon, I focus on the fundamentals: clean code architecture, intuitive user interfaces, efficient data structures, and continuous learning.
+              By combining financial discipline with modern full-stack web engineering, I build applications that are mathematically accurate, highly performant, and user-friendly. My goal is to create software that empowers businesses, automates financial operations, and solves meaningful problems.
             </p>
           </div>
 
-          {/* Core Passions Grid */}
+          {/* Core Focus Badges */}
           <div className="pt-2 grid grid-cols-1 sm:grid-cols-2 gap-3">
             {[
-              "Artificial Intelligence & Agentic Workflows",
-              "Full-Stack Web Applications (React & Node)",
-              "Developer Tools & Automation Scripts",
-              "Cloud Technologies & Open Source"
-            ].map((passion, idx) => (
+              "Financial Technology (FinTech)",
+              "Full-Stack Web Engineering",
+              "Business & Accounting Logic",
+              "Developer Tools & Automation"
+            ].map((focus, idx) => (
               <div key={idx} className="flex items-center space-x-2 text-stone-700 dark:text-slate-200 text-sm">
                 <CheckCircle2 className="h-4 w-4 text-indigo-600 dark:text-indigo-400 shrink-0" />
-                <span className="font-medium text-xs font-mono">{passion}</span>
+                <span className="font-medium text-xs font-mono">{focus}</span>
               </div>
             ))}
           </div>

@@ -1,6 +1,6 @@
 import React from "react";
 import { motion } from "motion/react";
-import { Code, Cpu, Database, Cloud, Terminal, Sparkles, Wrench, Layers } from "lucide-react";
+import { Code, Cpu, Database, Cloud, Terminal, Sparkles, Wrench, Layers, Landmark } from "lucide-react";
 
 interface SkillCategory {
   name: string;
@@ -33,19 +33,19 @@ export default function Skills() {
       name: "Databases",
       icon: Database,
       accentColor: "text-amber-600 dark:text-amber-400 border-amber-500/20 bg-amber-50 dark:bg-amber-950/50",
-      skills: ["PostgreSQL", "SQLite", "Relational Schema Design (3NF)", "Query Optimization"]
+      skills: ["PostgreSQL", "SQLite", "3NF Relational Schema Design", "Query Optimization"]
+    },
+    {
+      name: "Financial Systems",
+      icon: Landmark,
+      accentColor: "text-purple-600 dark:text-purple-400 border-purple-500/20 bg-purple-50 dark:bg-purple-950/50",
+      skills: ["Double-Entry Bookkeeping Math", "Financial Statements (Balance Sheet/Income)", "Integer Currency Arithmetic", "Business Logic"]
     },
     {
       name: "Cloud & DevOps",
       icon: Cloud,
       accentColor: "text-violet-600 dark:text-violet-400 border-violet-500/20 bg-violet-50 dark:bg-violet-950/50",
-      skills: ["Vercel", "Docker", "Git & GitHub", "Linux CLI", "CI/CD Deployment"]
-    },
-    {
-      name: "AI & Automation",
-      icon: Sparkles,
-      accentColor: "text-rose-600 dark:text-rose-400 border-rose-500/20 bg-rose-50 dark:bg-rose-950/50",
-      skills: ["AI API Integrations (Gemini / OpenAI)", "Python Automation Scripts", "Web Scraping (Baileys)"]
+      skills: ["Vercel", "Docker", "Git & GitHub", "Linux CLI", "Deployment Pipelines"]
     },
     {
       name: "Developer Tools",
@@ -66,13 +66,13 @@ export default function Skills() {
         <div className="max-w-2xl mb-14">
           <div className="inline-flex items-center space-x-1.5 px-3 py-1 bg-indigo-50 dark:bg-indigo-950/50 text-indigo-600 dark:text-indigo-300 text-xs font-mono font-semibold rounded-full uppercase tracking-wider mb-3">
             <Wrench className="h-3.5 w-3.5" />
-            <span>Technical Stack</span>
+            <span>Technical Capabilities</span>
           </div>
           <h2 className="text-3xl md:text-4xl font-display font-bold text-stone-900 dark:text-white">
-            Skills & Technologies
+            Technical Skills & Specializations
           </h2>
           <p className="text-stone-600 dark:text-slate-400 font-sans mt-2 text-base">
-            Technologies and tools I actively use in my development workflow.
+            Organized categories of tools, languages, and financial engineering capabilities I actively use.
           </p>
         </div>
 

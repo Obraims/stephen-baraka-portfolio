@@ -1,12 +1,13 @@
 import { useState, useEffect } from "react";
 import Hero from "./components/Hero.tsx";
 import About from "./components/About.tsx";
+import FinancialIdentityPhilosophy from "./components/FinancialIdentityPhilosophy.tsx";
 import Projects from "./components/Projects.tsx";
 import Skills from "./components/Skills.tsx";
+import WhatImBuilding from "./components/WhatImBuilding.tsx";
 import HyperLedger from "./components/HyperLedger.tsx";
 import GithubShowcase from "./components/GithubShowcase.tsx";
 import Timeline from "./components/Timeline.tsx";
-import OutlookPhilosophy from "./components/OutlookPhilosophy.tsx";
 import CodePlayground from "./components/CodePlayground.tsx";
 import SocialHub from "./components/SocialHub.tsx";
 import Contact from "./components/Contact.tsx";
@@ -53,12 +54,12 @@ export default function App() {
 
   const navLinks = [
     { name: "About", href: "#about" },
+    { name: "Philosophy", href: "#philosophy" },
     { name: "Projects", href: "#projects" },
     { name: "Skills", href: "#skills" },
+    { name: "Current Focus", href: "#focus" },
     { name: "Ledger Demo", href: "#finledger" },
-    { name: "GitHub", href: "#github" },
-    { name: "Milestones", href: "#experience" },
-    { name: "Philosophy & Focus", href: "#philosophy" },
+    { name: "Experience", href: "#experience" },
     { name: "Contact", href: "#contact" }
   ];
 
@@ -199,10 +200,16 @@ export default function App() {
           <About />
         </motion.div>
         <motion.div variants={pageSectionVariants}>
+          <FinancialIdentityPhilosophy />
+        </motion.div>
+        <motion.div variants={pageSectionVariants}>
           <Projects />
         </motion.div>
         <motion.div variants={pageSectionVariants}>
           <Skills />
+        </motion.div>
+        <motion.div variants={pageSectionVariants}>
+          <WhatImBuilding />
         </motion.div>
         <motion.div variants={pageSectionVariants}>
           <HyperLedger />
@@ -212,9 +219,6 @@ export default function App() {
         </motion.div>
         <motion.div variants={pageSectionVariants}>
           <Timeline />
-        </motion.div>
-        <motion.div variants={pageSectionVariants}>
-          <OutlookPhilosophy />
         </motion.div>
         <motion.div variants={pageSectionVariants}>
           <CodePlayground />
@@ -236,7 +240,7 @@ export default function App() {
               Stephen Baraka
             </span>
             <span className="text-xs text-stone-500 dark:text-slate-400 font-sans">
-              Software Engineer & B.Sc. Accounting & IT Student • Maseno University
+              Financial Software Engineer • Maseno University B.Sc. Accounting & IT
             </span>
           </div>
 

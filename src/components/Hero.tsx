@@ -1,14 +1,13 @@
-import { Github, Linkedin, Mail, Terminal, ChevronRight, MessageCircle } from "lucide-react";
+import { Github, Linkedin, Mail, Terminal, ChevronRight } from "lucide-react";
 import { motion, AnimatePresence } from "motion/react";
 import React, { useRef, useState, useEffect } from "react";
 import frontProfileImage from "../assets/images/profile_front.jpg.png";
 
 export default function Hero() {
   const roles = [
-    "Software Engineer",
-    "Full-Stack Developer",
-    "AI & Automation Explorer",
-    "Maseno University Undergrad"
+    "Financial Software Engineer",
+    "Full-Stack Web Engineer",
+    "FinTech & Automation Specialist"
   ];
   const [roleIdx, setRoleIdx] = useState(0);
 
@@ -22,7 +21,7 @@ export default function Hero() {
   const [activeRightTab, setActiveRightTab] = useState<"card" | "terminal">("card");
   const [terminalLines, setTerminalLines] = useState<string[]>([
     "System Ready: Stephen Baraka Shell",
-    "Education: Maseno University — B.Sc. Accounting & Finance with IT",
+    "Specialization: Financial Software Engineering & Web Systems",
     "Type 'help' for available commands.",
     ""
   ]);
@@ -48,7 +47,7 @@ export default function Hero() {
         "  help      - Show available commands",
         "  bio       - Read background and university studies",
         "  skills    - View technical stack & tools",
-        "  projects  - Show featured projects",
+        "  projects  - Show featured software projects",
         "  contact   - Display contact details",
         "  clear     - Clear terminal history"
       ];
@@ -59,12 +58,13 @@ export default function Hero() {
     } else if (cmd === "bio") {
       response = [
         `$ ${rawCmd}`,
-        "BACKGROUND & PROFILE:",
-        "  Name      : Stephen Baraka",
-        "  University: Maseno University, Kenya",
-        "  Degree    : B.Sc. Accounting and Finance with IT",
-        "  Focus     : Full-stack web development, AI integration,",
-        "              developer automation, and practical software solutions."
+        "IDENTITY & PROFILE:",
+        "  Name          : Stephen Baraka",
+        "  Title         : Financial Software Engineer",
+        "  University    : Maseno University, Kenya",
+        "  Degree        : B.Sc. Accounting and Finance with IT",
+        "  Mission       : Bridging financial logic, business systems, and modern",
+        "                  full-stack web software to solve real-world problems."
       ];
     } else if (cmd === "skills") {
       response = [
@@ -73,8 +73,8 @@ export default function Hero() {
         "  - Languages: TypeScript, JavaScript, Python, SQL, HTML/CSS",
         "  - Frontend : React, Next.js, Tailwind CSS, Vite, Motion",
         "  - Backend  : Node.js, Express, REST APIs",
-        "  - Databases: PostgreSQL, SQLite",
-        "  - Tools    : Git, Docker, Vercel, Linux CLI"
+        "  - FinTech  : Ledger Math, Integer Currency Arithmetic, GAAP Rules",
+        "  - Tools    : Git, Docker, PostgreSQL, Vercel, Linux CLI"
       ];
     } else if (cmd === "projects") {
       response = [
@@ -92,7 +92,6 @@ export default function Hero() {
         "  - Email   : obraimssteve@gmail.com",
         "  - GitHub  : github.com/Obraims",
         "  - LinkedIn: linkedin.com/in/stephen-baraka-055b7040b",
-        "  - TikTok  : @_obraims_",
         "  - WhatsApp: +254 743 717 285"
       ];
     } else {
@@ -115,7 +114,7 @@ export default function Hero() {
           
           <div className="inline-flex items-center space-x-2 px-3.5 py-1.5 bg-indigo-50 dark:bg-indigo-950/60 text-indigo-700 dark:text-indigo-300 text-xs font-mono font-medium rounded-full border border-indigo-200/60 dark:border-indigo-800/50">
             <span className="h-2 w-2 rounded-full bg-emerald-500 animate-pulse" />
-            <span>Open for Software Engineering Opportunities</span>
+            <span>Financial Software Engineer</span>
           </div>
 
           <div className="space-y-3">
@@ -140,7 +139,7 @@ export default function Hero() {
             </div>
 
             <p className="text-base md:text-lg text-stone-600 dark:text-slate-300 max-w-xl leading-relaxed">
-              Undergraduate studying B.Sc. Accounting & Finance with IT at <span className="font-semibold text-stone-800 dark:text-slate-100">Maseno University</span>. I build modern full-stack web applications, AI-powered automation, developer tools, and practical software solutions.
+              Bridging finance, business logic, and modern software engineering. I build practical web applications, FinTech tools, developer platforms, and automation systems that solve real-world problems.
             </p>
           </div>
 
@@ -238,8 +237,8 @@ export default function Hero() {
                     <h3 className="text-xl font-display font-bold text-white">
                       Stephen Baraka
                     </h3>
-                    <p className="text-xs text-slate-300 mt-1">
-                      Software Engineer & Accounting IT Student
+                    <p className="text-xs text-slate-300 mt-1 font-medium">
+                      Financial Software Engineer
                     </p>
                   </div>
                 </div>
